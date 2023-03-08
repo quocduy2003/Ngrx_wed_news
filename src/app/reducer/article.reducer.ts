@@ -12,6 +12,6 @@ export const articleReducer=createReducer(
     initialState,
     on(ArticleAction.getPerginate,(state)=>({...state,loading:true})),
     on(ArticleAction.getPerginateSucess,(state,action)=>({...state,article:action.article})),
-    on(ArticleAction.getPerginateSucess,(state,action)=>({...state,loading:false,isSuccesss:true})),
+    on(ArticleAction.getPerginateFailure,(state,action)=>({...state,loading:true,isSuccesss:false})),
     )
     

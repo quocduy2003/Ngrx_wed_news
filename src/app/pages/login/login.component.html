@@ -8,7 +8,7 @@
         <input type="password" id="email" class="signup-input" placeholder="Password">
         <button class="signup-submit">Sign up</button>
         </form>
-        <button class="signup-social">
+        <button (click)="authService.loginWithGoogle()" class="signup-social">
             <i class="bi bi-google signup-social-icon"></i>
             <span class="signup-social-text">Sign up with Google</span>
         </button>
@@ -18,3 +18,5 @@
         </p>
     </div>
 </div>
+<!-- <button *ngIf="this.user!=null">logout</button>
+<button *ngIf="this.user==null">login</button> -->
